@@ -18,5 +18,28 @@
     ALTER TABLE personas
       MODIFY apellido varchar(50) not null;
 
-## Agregar una nueva columna
+## Agregar una nueva columna al final de la tabla
+
+    ALTER TABLE nombreTabla  
+      ADD nombreColumna tipo catacterísticas;  
+
+    ALTER TABLE personas  
+      ADD anotaciones varchar(200);
+
+## Agregar una nueva columna después de una columna existente
+
+    ALTER TABLE nombreTabla  
+      ADD nombreColumnaNueva tipo catacterísticas   
+      AFTER nombreColExistente;  
+
+    ALTER TABLE personas  
+      ADD anotaciones varchar(500)  
+      AFTER dni; 
+
 ## Eliminar una columna
+
+    ALTER TABLE nombreTabla  
+      DROP nombreColumna;
+
+    ALTER TABLE personas   
+      DROP anotaciones;
